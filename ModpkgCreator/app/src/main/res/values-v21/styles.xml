@@ -8,4 +8,8 @@
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
+    <style name="DialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:colorAccent">@color/colorAccent</item>
+    </style>
+
 </resources>

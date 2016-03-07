@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_1"
+        android:singleLine="true"
+        android:hint="스크립트 이름을 입력하세요."
+        android:textColor="@color/white"
+        android:textColorHint="@color/whiteTransparent"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_2"
+        android:singleLine="true"
+        android:hint="스크립트 버전을 입력하세요."
+        android:textColor="@color/white"
+        android:textColorHint="@color/whiteTransparent"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_3"
+        android:singleLine="true"
+        android:hint="스크립트 제작자를 입력하세요."
+        android:textColor="@color/white"
+        android:textColorHint="@color/whiteTransparent"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_4"
+        android:hint="스크립트 설명을 작성하세요."
+        android:textColor="@color/white"
+        android:textColorHint="@color/whiteTransparent"
+        android:layout_margin="5dp"/>
+
+</LinearLayout>

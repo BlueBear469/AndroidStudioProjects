@@ -1,28 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent">
+    android:background="@color/colorAccent"
+    android:id="@+id/background">
 
+    <me.yugy.github.reveallayout.RevealLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/reveal_layout"
+        android:visibility="invisible">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/reveal_view"
+            android:visibility="invisible"
+            android:background="@color/colorAccent2"
+            />
+    </me.yugy.github.reveallayout.RevealLayout>
 
-    <ImageView
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_margin="26dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/ic_arrow_forward_white_24dp"
-        android:scaleType="fitXY"
-        android:id="@+id/arrow"/>
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:id="@+id/viewFlipper">
+        <include layout="@layout/layout1" />
 
-    <TextView
+        <include layout="@layout/layout2" />
+
+        <include layout="@layout/layout3" />
+    </ViewFlipper>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/centerobj"/>
+
+    <include layout="@layout/indicator" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="다음"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:layout_marginBottom="25dp"
+        android:padding="26dp"
+        android:gravity="right|end"
+        android:layout_toRightOf="@id/centerobj"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/arrow" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:id="@+id/arrowButton">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="추가"
+            android:textSize="20dp"
+            android:layout_marginRight="25dp"
+            android:textColor="@color/white"
+            android:id="@+id/arrowText"
+            />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/ic_arrow_forward_white_24dp"
+            android:scaleType="fitXY"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="26dp"
+        android:gravity="left|start"
+        android:layout_toLeftOf="@id/centerobj"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:id="@+id/cancelButton"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20dp"
+            android:layout_marginLeft="25dp"
+            android:textColor="@color/white"
+            android:id="@+id/cancelText"
+            />
+
+    </LinearLayout>
+
 
 </RelativeLayout>
