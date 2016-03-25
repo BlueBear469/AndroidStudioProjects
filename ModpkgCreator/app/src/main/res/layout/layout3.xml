@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/vjox"
+        android:id="@+id/intro1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3. 파일 정보를 작성하세요."
+        android:textSize="25dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
+        android:layout_above="@id/intro1"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:text="추가됨 : "
+        android:id="@+id/pathTextView3"
+        android:singleLine="true"
+        android:ellipsize="middle"
+        android:layout_below="@+id/intro1"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+</RelativeLayout>
